@@ -1,0 +1,242 @@
+<!--pages/follow/follow.wxml-->
+<!-- 顶部 -->
+<view class="dingbu">
+  <view>
+    <image src="/icon/caidan.png"></image>
+  </view>
+  <view>动态</view>
+  <view>云圈</view>
+  <view>
+    <image src="/icon/jia.png"></image>
+  </view>
+</view>
+<!-- 关注歌手 -->
+<view>
+  <scroll-view class="box-x" scroll-x>
+    <view class="box">
+      <view class="box3">
+        <image src="/icon/tianjiahaoyou.png"></image>
+      </view>
+      <view class="box4"><text>发现好友</text></view>
+    </view>
+    <view class="box">
+      <view class="box1">
+        <image src="http://img.9ku.com/pic/zjpic/5/44727.jpg"></image>
+      </view>
+      <view class="box2"><text>孙燕姿</text></view>
+    </view>
+    <view class="box">
+      <view class="box1">
+        <image src="http://www.hinews.cn/pic/0/16/17/83/16178388_880684.jpg"></image>
+      </view>
+      <view class="box2"><text>梁静茹</text></view>
+    </view>
+    <view class="box">
+      <view class="box1">
+        <image src="https://p7.itc.cn/images01/20210319/24453d91d4ec40b8a66788ddc2c024bb.jpeg"></image>
+      </view>
+      <view class="box2"><text>蔡依林</text></view>
+    </view>
+    <view class="box">
+      <view class="box1">
+        <image src="http://p1.music.126.net/1tSJODTpcbZvNTCdsn4RYA==/109951165034950656.jpg?param=180y180"></image>
+      </view>
+      <view class="box2"><text>薛之谦</text></view>
+    </view>
+    <view class="box">
+      <view class="box1">
+        <image src="http://p1.music.126.net/Q4JSaV98wuU6xElATsFjAw==/3261151495434543.jpg?param=180y180"></image>
+      </view>
+      <view class="box2"><text>杨宗纬</text></view>
+    </view>
+
+  </scroll-view>
+</view>
+<!-- 我的关注 -->
+<view class="follow">
+  <view class="f1">我的关注</view>
+  <view class="f2">
+    <text>全部</text>
+    <text>音乐人</text>
+    <text>朋友</text>
+  </view>
+</view>
+<!-- 内容  -->
+<view class="content">
+<!-- 内容1 -->
+  <!-- 头 -->
+  <view class="head">
+    <view class="head-1">
+      <image src="http://p1.music.126.net/ZVQwrUkMExU9Npzn22ak0A==/109951164879572466.jpg?param=180y180"></image>
+    </view>
+    <view class="content-name">
+      <text>云音乐VIP</text>
+      <text>昨天12:00</text>
+    </view>
+    <view class="vip">
+      <image
+        src="https://p5.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4357872499/0cd3/2985/4070/5951d11609c60e3aa96ebddeb6bb8284.png">
+      </image>
+    </view>
+    <text style="margin-top: 10rpx; margin-left: 10rpx;">分享歌单：</text>
+  </view>
+  <!-- 文字图片 -->
+  <view class="text-img">
+    <view class="content-text">
+      <text>#心语推歌墙#</text>
+      <text space="ensp"> 今日推歌:《Shivers》--- Ed Sheeran“不想体验醉醺醺的人生了 想去动物园 画室 海洋馆 文具店 公园书店 对纯真的热爱不能向世俗的快餐式生活举白旗”--似海不疑天的蓝</text>
+    </view>
+    <view class="content-img">
+      <view class="img" wx:for="{{img}}"  data-imgindex="{{index}}">
+        <image src="{{item}}"  bindtap="tapimg" data-src="{{item}}"></image>
+      </view>
+    </view>
+  </view>
+  <!-- 歌曲推荐 -->
+  <view class="yinyue">
+    <view class="yy-img">
+      <image
+        src="http://m.qpic.cn/psc?/V51BsBPu1D3Y4U1MYUi71cNonN3bGCVd/45NBuzDIW489QBoVep5mcWNrJ9lHF4KrWD7aZXdkfIfzolN4PsBvbkpqaPnVIqHSUgFshR76BHdz*85jxkpX8ifmcdYGDx*hmxVLemC1cXM!/b&bo=OAQ4BAAAAAABJwA!&rf=viewer_4">
+      </image>
+    </view>
+    <view class="gedan">
+      <text>歌单</text>
+
+    </view>
+    <view class="yinyue-text"><text space="ensp">从《Shivers》听|心语推荐墙 </text>
+      <text>by 云音乐VIP</text>
+    </view>
+  </view>
+  <!-- 点赞评论转发 -->
+  <view class="dzpl">
+    <view class="zhuang"><image src="/icon/zhuangfa.png"></image><text>75</text> </view>
+    <view class="ping"><image src="/icon/pinglun.png"></image><text>500</text> </view>
+    <view class="dian" hover-class="dz"><image src="/icon/dianzan.png"></image><text>1100</text></view>
+  </view>
+
+  <!-- 内容 2 -->
+
+  <!-- 头 -->
+  <view class="head">
+    <view class="head-1">
+      <image src="http://p1.music.126.net/_aEPXmHuskM-g140GROZnQ==/109951163879490620.jpg?param=180y180"></image>
+    </view>
+    <view class="content-name">
+      <text>云音小秘书</text>
+      <text>昨天10:54</text>
+    </view>
+    <view class="vip2">
+      <image src="http://p1.music.126.net/l81wKgnHwl3n0ayI7iVVXA==/109951163322560971.png">
+      </image>
+    </view>
+    <text style="margin-top: 10rpx; margin-left: 10rpx;">分享单曲：</text>
+  </view>
+  <!-- 文字图片 -->
+  <view class="text-img">
+    <view class="content-text">
+      <text>#晚安时光#</text>
+      <text space="ensp">一定要在地球的某一个地方尽情流浪一次~晚安咯🌙</text>
+    </view>
+    <view class="content-img">
+      <view class="img2">
+        <image src="{{img2}}"></image>
+      </view>
+    </view>
+  </view>
+  <!-- 歌曲推荐 -->
+  <view class="yinyue">
+    <view class="yy-img">
+      <image
+        src="http://m.qpic.cn/psc?/V51BsBPu1D3Y4U1MYUi71cNonN3bGCVd/45NBuzDIW489QBoVep5mca2Zi0bwimnPSfCR3Tyy.leCoFVAMscFlxGK1zJhlSswpBT3MKy7XmQpGQw4EpAoO1KVo.CwvijO9RNIkV.4mno!/b&bo=IAMgAwAAAAABFzA!&rf=viewer_4">
+      </image>
+    </view>
+    <view class="gedan">
+      <text>歌单</text>
+    </view>
+    <view class="yinyue-text"><text space="ensp">带我去很远地方 </text> <text>黄霄雲</text></view>
+  </view>
+  <!-- 点赞评论转发 -->
+  <view class="dzpl">
+    <view class="zhuang"><image src="/icon/zhuangfa.png"></image><text>25</text> </view>
+    <view class="ping"><image src="/icon/pinglun.png"></image><text>299</text> </view>
+    <view class="dian"><image src="/icon/dianzan.png"></image><text>710</text></view>
+  </view>
+  <!-- 内容3 -->
+  <!-- 头 -->
+  <view class="head">
+    <view class="head-1">
+      <image src="http://p1.music.126.net/pRDRt-ChX4Qg5FyMwTGXKg==/109951164440873447.jpg?param=180y180"></image>
+    </view>
+    <view class="content-name">
+      <text>网易CEO丁磊</text>
+      <text>10月17日</text>
+    </view>
+    <view class="vip">
+      <image
+        src="https://p5.music.126.net/obj/wo3DlcOGw6DClTvDisK1/4357872499/0cd3/2985/4070/5951d11609c60e3aa96ebddeb6bb8284.png">
+      </image>
+    </view>
+    <text style="margin-top: 10rpx; margin-left: 10rpx;">分享单曲：</text>
+  </view>
+  <!-- 文字图片 -->
+  <view class="text-img">
+    <view class="content-text">
+      <text></text>
+      <text space="ensp">来自电影《绿皮书》的配乐，复古律动的节奏搭配Timmy shaw粗狂的嗓音，感染力十足</text>
+    </view>
+    <view class="content-img1">
+      <view class="img2">
+        <image></image>
+      </view>
+    </view>
+  </view>
+  <!-- 歌曲推荐 -->
+  <view class="yinyue">
+    <view class="yy-img">
+      <image
+        src="http://m.qpic.cn/psc?/V51BsBPu1D3Y4U1MYUi71cNonN3bGCVd/45NBuzDIW489QBoVep5mcf2wIvbxdSYG9uaYi7BpAiptg2ilgqbEGVImX5pZeFPAwlaNIOJofsrssHqKnpyxqgxBx.lhxArsTDdjVrEJGsI!/b&bo=OAQ4BAAAAAABFzA!&rf=viewer_4">
+      </image>
+    </view>
+    <view class="gedan">
+      <text>歌单</text>
+    </view>
+    <view class="yinyue-text"><text space="ensp">A Letter From My Baby </text> <text>Timmy Shaw</text></view>
+  </view>
+    <!-- 点赞评论转发 -->
+    <view class="dzpl">
+    <view class="zhuang"><image src="/icon/zhuangfa.png"></image><text>66</text> </view>
+    <view class="ping"><image src="/icon/pinglun.png"></image><text>666</text> </view>
+    <view class="dian">
+    <image wx:if="{{top}}" src="/icon/dianzan.png" bindtap="dz"></image>
+    <image wx:else src="/icon/dz2.png" bindtap="dz2"></image>
+    <text>{{number}}</text></view>
+  </view>
+</view>
+<!-- 大家都在聊  -->
+<view class="t1"><text>大家都在聊</text></view>
+<swiper class="t1-swiper" next-margin="80rpx" circular>
+  <swiper-item class="t1-text">
+  <view class="t1-box">
+      <view class="t1-t-i" wx:for="{{swipercontent}}">
+      <image src="/icon/jinghao.png" class="t1-img"></image>
+      <text>{{item}}</text>
+    </view>
+  </view>
+  </swiper-item>
+  <swiper-item class="t1-text">
+  <view class="t1-box">
+      <view class="t1-t-i" wx:for="{{swipercontent1}}">
+      <image src="/icon/jinghao.png" class="t1-img"></image>
+      <text>{{item}}</text>
+    </view>
+  </view>
+  </swiper-item>
+  <swiper-item class="t1-text">
+  <view class="t1-box">
+      <view class="t1-t-i" wx:for="{{swipercontent2}}">
+      <image src="/icon/jinghao.png" class="t1-img"></image>
+      <text>{{item}}</text>
+    </view>
+  </view>
+  </swiper-item>
+</swiper>

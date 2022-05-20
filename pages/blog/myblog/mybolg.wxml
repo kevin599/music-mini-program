@@ -1,0 +1,16 @@
+<view class="top_list">
+  <view class="myblog" wx:for="{{myblogArr}}">
+    <image src="{{item.picture}}"></image>
+    <text>{{item.text}}</text>
+  </view>
+</view>
+<view class="recommend">
+  <text class="text1">为你推荐</text>
+  <text class="text2">❌</text>
+</view>
+<view class="electric_sound">
+  <view class="music_list" wx:for="{{elcArr}}" wx:key>
+    <image src="{{item.picture}}"></image>
+    <text>{{item.text}}</text>
+  </view>
+</view>

@@ -1,0 +1,23 @@
+<!--pages/gedan/gedan.wxml-->
+<!-- top -->
+<!-- <view class="title">歌单</view>
+<view class="msg">
+  <image src=""></image>
+  <view class="flexBox">
+    <view class="title">D.U.O陈奕迅2010演唱会</view>
+    <image src=""></image>
+  </view>
+</view> -->
+<image
+  src="http://m.qpic.cn/psc?/V52gn3BP0WWI6X0Ctnir2lcI8U3tbV01/45NBuzDIW489QBoVep5mcUemlWa39JM78W0WxKrqhioG4YS*HRhWZxk8chYyV0j.KW2qLhqhINogx1Y8MBTl0PQPr8s0kohC0O1zH8Ed6q8!/b&bo=cAJrAQAAAAADFyo!&rf=viewer_4">
+</image>
+<!-- below -->
+<view class="container1">
+  <view class="item" wx:for="{{gedanArr}}" bindtap="playAudio">
+      <view class="num">{{index+1}}</view>
+    <view class="flex_column">
+      <view class="songTitle">{{item.title}}</view>
+      <view class="author">{{item.author}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,283 @@
+page{
+  background-color: #ccc(212, 25, 25);
+  font-family: STKaiti;
+}
+/* 关注歌手 */
+.box-x{
+  white-space: nowrap;
+  background-color: #fff;
+}
+.box-x .box{
+  text-align: center;
+  width : 120rpx;
+  height: 120rpx;
+  margin: 10rpx 10rpx;
+  background-color: white;
+  /* 设置为横向 */
+  display: inline-block;
+}
+.box-x .box1{
+  width: 120rpx;
+  height: 120rpx;
+  margin-left: 10rpx;
+  border: 4rpx solid red;
+  border-radius: 50% 
+}
+.box-x .box .box3{
+  width: 120rpx;
+  height: 120rpx;
+  margin-left: 10rpx;
+  border: 2rpx solid red;
+  border-radius: 50% 
+}
+.box-x .box .box3 image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 20rpx;
+  border-radius: 0;
+}
+.box-x .box image{
+  width: 120rpx;
+  height: 120rpx;
+  /* margin-top: 10rpx; */
+  border-radius: 50% 
+}
+.box-x .box text{
+  display: block;
+  font-size: 26rpx;
+  margin-top: 6rpx;
+  /* margin-left: 10rpx; */
+}
+
+
+/* 顶部 */
+.dingbu {
+  background-color: white;
+    /* 容器样式 */
+  /* 设置弹性布局 */
+  display: flex;
+  justify-content: space-between;
+  height: 100rpx;
+  align-items: center;
+  flex-wrap: wrap; 
+
+}
+.dingbu image{
+  height: 35rpx;
+  width: 35rpx;
+  margin-top: 10rpx;
+}
+.dingbu view {
+  /* 后代选择器 */
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  width: 20%;
+}
+
+/* 我的关注 */
+.follow{
+  background-color: #fff;
+  margin-top: 1%;
+  display: flex;
+  height: 60rpx;
+    line-height: 60rpx;
+
+}
+.follow .f1{
+  width: 50%;
+  font-size: 34rpx;
+  margin-left: 20rpx;
+  /* justify-content: center; */
+  font-weight: 700;
+}
+.follow .f2{
+  flex-grow: 1;
+  flex-wrap: nowrap;
+}
+.follow .f2 text{
+  /* display: block; */
+  font-size: 30rpx;
+  margin: 0 auto;
+  font-weight: 700;
+}
+.follow .f2 text:nth-child(2),.follow .f2 text:nth-child(3){
+  color:grey;
+  margin-left: 60rpx;
+}
+/* 内容 */
+.content{
+  background-color: #fff;
+}
+/* 头 */
+.content .head{
+  display: flex;
+}
+.content .head  .head-1{
+  width: 110rpx;
+  margin-left: 10rpx;
+}
+.content .head  .head-1 image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.content .head .content-name{
+  /* flex-grow: 1; */
+  margin-top: 10rpx;
+  width: 160rpx;
+}
+.content .head .content-name text{
+  display: block;
+  color: blueviolet;
+}
+.content .head .content-name text:nth-child(2){
+  font-size: 26rpx;
+  color: #ccc;
+}
+.content .head .vip image{
+  width: 100rpx;
+  height: 40rpx;
+  margin-top: 10rpx;
+}
+.content .head .vip2 image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 10rpx;
+}
+/* 文字图片 */
+.content .text-img{
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+}
+.content .text-img .content-text {
+ /* flex-wrap: nowrap; */
+  margin: 10rpx 20rpx;
+}
+.content .text-img .content-text text:nth-child(1){
+ color: blueviolet;
+}
+/* content-img */
+.content .text-img .content-img {
+  width: 100vw;
+  height: 500rpx;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 20rpx; 
+   border-radius: 4%;
+}
+.content .text-img .content-img .img{
+  width: 33%;
+  height: 160rpx;
+}
+.content .text-img .content-img .img image{
+  width: 96%;
+  height: 160rpx;
+  border-radius: 4%;
+}
+/* 歌曲推荐 */
+.yinyue{
+  background-color: #ccc;
+  height: 80rpx;
+  margin: 4rpx 20rpx 20rpx 20rpx;
+  /* margin-left: 20rpx; */
+  display: flex;
+  border-radius: 10rpx;
+}
+.yinyue .yy-img{
+  width: 10%;
+  height: 60rpx;
+}
+.yinyue .yy-img image{
+  width: 96%;
+  height: 60rpx;
+  border-radius: 20%;
+  margin-top: 8rpx;
+}
+.yinyue .gedan{
+    width: 60rpx;
+    height: 40rpx;
+    margin-left: 4rpx;
+    float: inline-start;
+}
+
+.yinyue .gedan text{
+  width: 60rpx;
+  color: red;
+  border: 2rpx solid red;
+  font-size: 24rpx;
+}
+.yinyue .yinyue-text{
+  /* flex-grow: 1; */
+  display: block;
+  width: 540rpx;
+  font-size: 28rpx;
+  margin: 6rpx ;
+}
+.yinyue .yinyue-text text:nth-child(2){
+  color: gray;
+  font-size: 24rpx;
+  margin: 6rpx ;
+}
+/* 点赞评论转发 */
+.content .dzpl{
+  display: flex;
+  justify-content: space-around;
+  margin: 10rpx 60rpx;
+  height: 50rpx;
+}
+
+.content .dzpl image{
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 10rpx;
+  margin-top: 10rpx;
+}
+.content .dzpl text{
+  font-size: 28rpx;
+}
+/* 内容补充 */
+.content .text-img .content-img1{
+  width: 0;
+  height: 0;
+}
+.t1-swiper{
+  width: 750rpx;
+  height: 370rpx;
+}
+
+.t1-swiper .t1-text .t1-box{
+  width: 90%;
+  margin-left: 40rpx;
+  border-radius: 40rpx;
+  border: 2rpx solid black;
+}
+.t1-swiper .t1-text .t1-box .t1-t-i{
+  margin: 20rpx;
+}
+
+.t1-swiper .t1-text .t1-box .t1-t-i image{
+  width: 30rpx;
+  height: 30rpx;
+  background-color: skyblue;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.t1-swpier .t1-text .t1-box .t1-t-i .t1-img{
+  width: 5%;
+  width: 6rpx;
+  height: 6rpx;
+}
+.t1-swpier .t1-text .t1-box .t1-t-i{
+  font-size: 26rpx ;
+  width: 100vw;
+  height: 500rpx;
+}
+.t1 text{
+  font-size: 34rpx;
+  font-weight: 700;
+  margin-left: 20rpx;
+}
+/* 点赞 */
+

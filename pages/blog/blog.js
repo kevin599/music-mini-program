@@ -1,0 +1,169 @@
+// pages/blog/blog.js
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    myblogArr:[
+      {
+        imgPath:"./img/1.png",
+        text:"我的播客"
+      },
+      {
+        imgPath:"./img/2.png",
+        text:"排行榜"
+      },
+      {
+        imgPath:"./img/3.png",
+        text:"专注冥想"
+      },
+      {
+        imgPath:"./img/4.png",
+        text:"有声剧场"
+      },
+      {
+        imgPath:"./img/5.png",
+        text:"广播电台"
+      },
+      {
+        imgPath:"./img/6.png",
+        text:"热门播客"
+      }
+    ],
+    banner1:[
+      {
+        picture:"./img/FM/FM1.webp",
+        title:"抗美援朝亲历者：那些年当战地医生的经历",
+        player:"25345",
+        list:"超视点"
+      },
+      {
+        picture:"./img/FM/FM2.webp",
+        title:"揭秘袁世凯的逼宫大戏",
+        player:"29205",
+        list:"馒头说"
+      },
+      {
+        picture:"./img/FM/FM3.webp",
+        title:"阿加莎：推理小说女作家的天花板",
+        player:"20.6万",
+        list:"凯特迷之音"
+      },
+    ],
+ 
+    likeArr:[
+      {
+        picture:"./img/like/like_1.webp",
+        text:"磁性嗓音，清婉吟唱"
+      },
+      {
+        picture:"/pages/blog/img/like/like_2 .webp",
+        text:"听大案要案，观百态人生"
+      },
+      {
+        picture:"./img/like/like_3.webp",
+        text:"晨读英语美文"
+      },
+      {
+        picture:"./img/like/like_4.webp",
+        text:"我们只是快乐的搬运工"
+      },
+      {
+        picture:"./img/like/like_5.webp",
+        text:"全球最新HIPHOP街舞音乐"
+      },
+      {
+        picture:"./img/like/like_6.webp",
+        text:"Rainbow Six Siege Themes & Maps"
+      }
+    ],
+    newsArr:[
+      {
+        picture:"/pages/blog/img/news/news_1.webp",
+        text1:"国际奢侈品进菜市场，引发闹剧",
+        text2:"新闻解读",
+        text3:"元生评论"
+      },
+      {
+        picture:"/pages/blog/img/news/news_2.webp",
+        text1:"男子租法拉利飙车被抓:第一次想试试有多快",
+        text2:"新闻脱口秀",
+        text3:"吐小曹"
+      },
+      {
+        picture:"/pages/blog/img/news/news_3.webp",
+        text1:"与狼哥一起聊聊“铁娘子”周继红",
+        text2:"体坛风云",
+        text3:"游泳音浪"
+      },
+    ],
+    newsArr2:[
+      {
+        picture:"/pages/blog/img/news/new_4.webp",
+        text1:"航天大咖——上天为女儿摘星星 女航天员王亚平再探苍穹",
+        text2:"人物纪实",
+        text3:"大咖故事"
+      },
+      {
+        picture:"/pages/blog/img/news/new_5.webp",
+        text1:"惊天劫案：加德纳博物馆艺术品盗窃案疑云",
+        text2:"悬疑罪案",
+        text3:"黑猫侦探社"
+      },
+      {
+        picture:"/pages/blog/img/news/new_6.webp",
+        text1:"人生只有两次幸运，一次遇见你，一次走到底",
+        text2:"情感故事",
+        text3:"晚安亲爱的"
+      },
+    ],
+    newsArr3:[
+      {
+        picture:"/pages/blog/img/news/new_7.webp",
+        text1:"道理我都懂，却只能苦笑",
+        text2:"情感故事",
+        text3:"若素电台"
+      },
+      {
+        picture:"/pages/blog/img/news/new_8 .webp",
+        text1:"[雨后书店]",
+        text2:"情感故事",
+        text3:"声夜食堂"
+      },
+      {
+        picture:"/pages/blog/img/news/new_9.webp",
+        text1:"数到七，我就从彩虹里出来",
+        text2:"情感故事",
+        text3:"晚安诗集"
+      },
+    ],
+    elcArr:[
+      { 
+        picture:"/pages/blog/img/elc/elc_1.webp",
+        text:"比利时兄弟DVLM最新精彩电音"
+      },
+      { 
+        picture:"/pages/blog/img/elc/elc_2.webp",
+        text:"wahima0903"
+      },
+      { 
+        picture:"/pages/blog/img/elc/elc_3.webp",
+        text:"Dj SuRwaz"
+      },
+     
+    ],
+    imgIndex:0,
+  },
+  fun(event){
+    // console.log(event);
+    this.setData({
+      imgIndex:event.detail.current
+    })
+  },
+  onLoad: function () {
+    wx.setNavigationBarTitle({
+      title: '播客',
+    })
+},
+})

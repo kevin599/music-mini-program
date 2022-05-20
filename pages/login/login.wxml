@@ -1,0 +1,16 @@
+<!--pages/login/login.wxml-->
+<view class="container1">
+<image src="http://r.photo.store.qq.com/psc?/V52gn3BP0WWI6X0Ctnir2lcI8U3tbV01/45NBuzDIW489QBoVep5mcXLKzkSrcQHweLc8NDlJm4FDOVWvLIqicLn*ORc503kybpoP5y.FLEMvumDk3p1.C4XX0QvU5PFWzoXv7Nzx0E8!/r" mode="aspectFill"></image>
+  <view class="userinfo">
+    <block wx:if="{{!hasUserInfo}}">
+      <button class="{{btnClick==true? 'bg':''}}" wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile" >音乐的力量</button>
+      <!-- canIUseGetUserProfile: false,  //判断小程序的api是否能够在当前版本使用    -->
+      <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo">音乐的力量 </button>
+    </block>
+    <block wx:else>
+      <!-- <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
+    </block>
+  </view>
+</view>
+<!-- <button bindtap="to"></button> -->

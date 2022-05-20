@@ -1,0 +1,117 @@
+<!--pages/Me/Me.wxml-->
+<!-- <scroll-view scroll-y="true" style="height: 1572px;"> -->
+<!-- 顶部 用户个人信息 -->
+<view class="userMsgBox">
+  <image src="{{UserInfo.avatarUrl}}"></image>
+  <view class="userMsgflexBox">
+    <view class="NickName">{{UserInfo.nickName}}</view>
+    <view class="row">
+      <!-- <view>{{UserInfo.gender}}</view> -->
+      <view>{{sex}}</view>
+      <view>{{UserInfo.country}}</view>
+    </view>
+  </view>
+  <view class="jiantou">
+    <image
+      src="http://m.qpic.cn/psc?/V52gn3BP0WWI6X0Ctnir2lcI8U3tbV01/45NBuzDIW489QBoVep5mcYldyAeftDWW4JzjVei5qVVA4kFNla.nVsaMmson7UckC3tX4SV8Hz60CNhAs1VXJtkFM9LQIzFhYQ6isGOmEac!/b&bo=MAAwAAAAAAADFzI!&rf=viewer_4">
+    </image>
+  </view>
+</view>
+<!-- 功能 -->
+<view class="funBox">
+  <view class="item" wx:for="{{funArr}}" wx:key="thiskey2">
+    <image src="{{item.img}}"></image>
+    <text>{{item.text}}</text>
+  </view>
+</view>
+<!-- 添加我中意的音乐 -->
+<view class="favMusicBox">
+  <image src="{{zhuanji}}"></image>
+  <view class="favflexBox">
+    <view class="favTitle">我喜欢的音乐</view>
+    <view class="underTitle">986首</view>
+  </view>
+  <view class="xindongBtn">
+    <image
+      src="http://m.qpic.cn/psc?/V52gn3BP0WWI6X0Ctnir2lcI8U3tbV01/45NBuzDIW489QBoVep5mcVn13Dmx4pD6Z9P93RG4RKJqOFukan8qpIyZgTpW.5TQpRzU81VhDzNgjpM4I.rvXcTtVZfG7Z0CNU79LPspVlM!/b&bo=MAAwAAAAAAADFzI!&rf=viewer_4">
+    </image>
+    <text>心动模式</text>
+  </view>
+</view>
+<view class="gedanView" style="width: 100%; " >
+<!-- 歌单Navigate -->
+
+<view class="gedanNavgate {{ gedanNavgate_sticky =='true'?' gedanNavgate_sticky':' ' }}">
+  <view class="gedanTitle" bindtap="toAdd">创建歌单</view>
+  <view class="shu" ></view>
+  <view class="gedanTitle" bindtap="toCollect">收藏歌单</view>
+  <view class="shu"></view>
+  <view class="gedanTitle"bindtap="toAss">歌单助手</view>
+</view>
+
+<!-- 创建歌单 -->
+<view class="addGeDan">
+  <view class="tips">创建共享歌单，和你的好友一同管理 :>
+  </view>
+  <view class="header">
+    <view class="headerText">创建歌单(7个)</view>
+    <image
+      src="http://m.qpic.cn/psc?/V52gn3BP0WWI6X0Ctnir2lcI8U3tbV01/45NBuzDIW489QBoVep5mcbWDKBAnUPhhtxBKq12jbhWtuDurXGM8KWyP9NVCRx1wpBTFkIt3qDVMgc85yYJD2YU4QcNaifMbCQXXb0I8UpY!/b&bo=MAAwAAAAAAADFzI!&rf=viewer_4">
+    </image>
+    <image
+      src="http://m.qpic.cn/psc?/V52gn3BP0WWI6X0Ctnir2lcI8U3tbV01/45NBuzDIW489QBoVep5mcbjS3v.ZjT0qb8CrHrmdgnisqM2hqAksUWPuAU6HYr2gTD4ew35VaIkuOGKBJequM2Y7bFxowMRy7W7*P4jof70!/b&bo=MAAwAAAAAAADFzI!&rf=viewer_4">
+    </image>
+  </view>
+  <view class="gedanLoop" wx:for="{{geDanArr}}" wx:key="thiskey" bindtap="TogeDan">
+    <image src="{{item.zhuanji_img}}"></image>
+    <view class="gedanFlexBox">
+      <view class="gedanTitle">{{item.zhuanji_title}}</view>
+      <view class="underTitle">{{item.num}}首</view>
+    </view>
+    <view>
+      <image src=""></image>
+    </view>
+  </view>
+</view>
+<!-- 收藏歌单 -->
+<view class="addGeDan">
+
+  <view class="header">
+    <view class="headerText">收藏歌单(6个)</view>
+    <image
+      src="http://m.qpic.cn/psc?/V52gn3BP0WWI6X0Ctnir2lcI8U3tbV01/45NBuzDIW489QBoVep5mcbWDKBAnUPhhtxBKq12jbhWtuDurXGM8KWyP9NVCRx1wpBTFkIt3qDVMgc85yYJD2YU4QcNaifMbCQXXb0I8UpY!/b&bo=MAAwAAAAAAADFzI!&rf=viewer_4">
+    </image>
+    <image
+      src="http://m.qpic.cn/psc?/V52gn3BP0WWI6X0Ctnir2lcI8U3tbV01/45NBuzDIW489QBoVep5mcbjS3v.ZjT0qb8CrHrmdgnisqM2hqAksUWPuAU6HYr2gTD4ew35VaIkuOGKBJequM2Y7bFxowMRy7W7*P4jof70!/b&bo=MAAwAAAAAAADFzI!&rf=viewer_4">
+    </image>
+  </view>
+  <view class="gedanLoop" wx:for="{{collectArr}}" wx:key="_this" bindtap="TogeDan">
+    <image src="{{item.img}}"></image>
+    <view class="gedanFlexBox">
+      <view class="gedanTitle">{{item.collect_title}}</view>
+      <view class="underTitle">{{item.num}}首</view>
+    </view>
+    <view>
+      <!-- <view class="more"> -->
+      <image
+        src="http://m.qpic.cn/psc?/V52gn3BP0WWI6X0Ctnir2lcI8U3tbV01/45NBuzDIW489QBoVep5mcbjS3v.ZjT0qb8CrHrmdgnisqM2hqAksUWPuAU6HYr2gTD4ew35VaIkuOGKBJequM2Y7bFxowMRy7W7*P4jof70!/b&bo=MAAwAAAAAAADFzI!&rf=viewer_4">
+      </image>
+      <!-- </view> -->
+    </view>
+  </view>
+</view>
+<!-- 歌单助手 -->
+<view class="addGeDan">
+  <view class="header">
+    <view class="headerText">歌单助手</view>
+  </view>
+  <view class="gedanAssText">你可以从歌单中筛选出</view>
+  <swiper autoplay="true" current="{{current}}" interval="2000" circular="true" duration="200" vertical="true" bindchange="randomColor">
+    <swiper-item wx:for="{{assArr}}" wx:key="*this">
+      <view class="swiper_item" style="color: {{randomColor}};">{{item}}</view>
+    </swiper-item>
+  </swiper>
+  <view class="tryBtn">试试看</view>
+</view>
+</view>
+<!-- </scroll-view> -->

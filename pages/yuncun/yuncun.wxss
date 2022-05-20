@@ -1,0 +1,69 @@
+/* pages/yuncun/yuncun.wxss */
+page {
+  background-color: #f4f6f5;
+}
+
+.tab-h {
+  height: 80rpx;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 80rpx;
+  font-size: 16px;
+  white-space: nowrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.tab {
+  margin: 0 36rpx;
+  display: inline-block;
+}
+
+.tab.active {
+  color: #fc5252;
+  position: relative;
+}
+
+.tab-content {
+  margin-top: 80rpx;
+}
+
+.scoll-h {
+  height: 100vh;
+}
+
+.scroll-view {
+  width: 100%;
+  white-space: nowrap;
+  background-color: #fff;
+}
+
+.scroll-view .nav {
+  display: inline-block;
+  padding: 20rpx;
+  background-color: #fff;
+}
+
+.Search {
+  width: 100%;
+  position: relative;
+  margin: 16rpx 0;
+}
+
+.Search input {
+  width: 90%;
+  height: 60rpx;
+  background-color: #edefee;
+  font-size: 24rpx;
+  border-radius: 40rpx;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.iconfont {
+  position: absolute;
+  top: 15rpx;
+  left: 180rpx;
+}

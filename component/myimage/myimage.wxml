@@ -1,0 +1,29 @@
+<!--component/myimage/myimage.wxml-->
+<view class="content">
+  
+  <view class="content-left" wx:for="{{playData.content}}">
+
+    <!-- 图片 文本-->
+    <view class="content-img">
+      <image src="{{item.imgPath}}" bindtap="playAudio"></image>
+      <view class="title">{{item.text}}</view>
+    </view>
+
+    <!-- 播放 点赞 类型 -->
+    <view class=" heat">
+      <!-- 播放 -->
+      <view class="gl-play">
+        <view class="iconfont icon-24gl-play"></view>
+        <view>{{item.play+"万"}}</view>
+      </view>
+      <!-- 点赞 -->
+      <view class="Like-it">
+        <view class="iconfont icon-dianzan"></view>
+        <view>{{item.dianzan+"万"}}</view>
+      </view>
+      <!-- 类型 -->
+      <view class="type">{{item.title}}</view>
+
+    </view>
+  </view>
+</view>

@@ -1,0 +1,405 @@
+<!--pages/faxian1/faxian1.wxml-->
+<!-- 头部做菜单 -->
+<view class="cd {{index1==1 ? 'cd1':'cd2'}}">
+    <view class="cd-left">
+        <view class="rightBox1">
+            <view class="rightBox1-1">
+                <image src="{{UserInfo.avatarUrl}}"></image>
+            </view>
+            <view class="rightBox1-2"><text>{{UserInfo.nickName}}</text></view>
+        </view>
+        <view class="rightBox2">
+            <scroll-view class="scrollbox1" scroll-y>
+                <view class="rightBox2-1">
+                    <view class="rightBox2-1-top">
+                        <view class="rightBox2-1-top1">
+                            <view class="rightBox2-1-top1-1">
+                                <view class="rightBox2-1-top1-2">
+                                    <view class="aa"><text>黑胶·贰</text></view>
+                                    <view class="bb"><view></view></view>
+                                </view>
+                                <view class="rightBox2-1-top1-3"><text>超12项专属特权等待修复</text></view>
+                            </view>
+                            <view class="rightBox2-1-top2">
+                                <view class="cc"><text>会员中心</text></view>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="rightBox2-1-bottom">
+                        <text>受邀专享，黑椒VIP低至0.32元/天</text>
+                    </view>
+                    <view class="rightBox2-2">
+                        <text></text>
+                    </view>
+                </view>
+                <!-- 三 -->
+                <view class="rightBox3">
+                    <view wx:for="{{rightBox3Arr}}" class="rightBox31" wx:key="*this">
+                        <view class="rightBox31-top"><text class="iconfont {{item.a}}"></text></view>
+                        <view class="rightBox31-content"><text>{{item.b}}</text></view>
+                        <view class="rightBox31-bottom"><text class="iconfont {{item.c}}"></text></view>
+                    </view>
+                </view>
+                <!-- 四 -->
+                <view class="rightBox4">
+                    <view class="rightBox4-1"><text>音乐服务</text></view>
+                    <view wx:for="{{rightBox4Arr}}" wx:key="*this" class="rightBox41">
+                        <view class="rightBox41-top"><text class="iconfont {{item.a}}"></text></view>
+                        <view class="rightBox41-content"><text>{{item.b}}</text></view>
+                        <view class="rightBox41-bottom"><text class="iconfont {{item.c}}"></text></view>
+                    </view>
+                </view>
+                <!-- 五 -->
+                <view class="rightBox4">
+                    <view class="rightBox4-1"><text>其它</text></view>
+                    <view wx:for="{{rightBox5Arr}}" wx:key="*this" class="rightBox41">
+                        <view class="rightBox41-top"><text class="iconfont {{item.a}}"></text></view>
+                        <view class="rightBox41-content"><text>{{item.b}}</text></view>
+                        <view class="rightBox41-bottom"><text class="iconfont {{item.c}}"></text></view>
+                    </view>
+                </view>
+                <!-- 六 -->
+                <view class="rightBox5">
+                    <text>退出登录/关闭</text>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+    <view class="cd-right" bindtap="cdF" data-index1="2"></view>
+</view>
+<!-- 头部 -->
+<view class="toubu">
+    <view class="toubu-1" bindtap="caidan" data-index1="1">
+        <view class="iconfont icon-caidan toubu-1-caidan"></view>
+    </view>
+    <view class="toubu-2">
+        <view class="serch-box iconfont icon-sousuo toubu-2-sousuo" bindtap="sousuo"></view>
+        <input type="text" class="ipt" value="张国荣" bindtap="sousuo" />
+        <view class="maikefeng-box  iconfont icon-maikefeng toubu-2-sousuo"></view>
+    </view>
+    <view class="toubu-3">
+        <view class="iconfont icon-guanzhu toubu-1-caidan" bindtap="guanzhu"></view>
+    </view>
+</view>
+<!-- 轮播图 -->
+<view class="lunbotu">
+    <swiper autoplay interval="2000" current="{{dotIndex}}" bindchange="fun">
+        <swiper-item wx:for="{{luntArr}}" wx:key="*this" data-index="{{index}}" bindtap="getImageId" >
+            <image src="{{item}}" class="lunbo-image"></image>
+        </swiper-item>
+    </swiper>
+    <!-- 指示点 -->
+    <view class="dot">
+        <view wx:for="{{luntArr}}" wx:key="*this"  bindtap="dotViewClick" id="{{index}}" class="{{ index == imgIndex? 'rr':''}}"></view>
+    </view>
+</view>
+<!-- 滚动列表 -->
+<scroll-view class="list" scroll-x>
+    <view wx:for="{{listArr1}}" wx:key="*this" class="list-view1">
+        <view class="list-view2">
+            <view class="iconfont {{item.listclass}}"></view>
+        </view>
+        <text>{{item.listtext}}</text>
+    </view>
+</scroll-view>
+<!-- 推荐歌单 -->
+<view class="tuibox">
+    <view class="tuibox1">
+        <view class="tuibox1-view1"><text>推荐歌单</text></view>
+        <view class="tuibox1-view2">更多 <text class="iconfont icon-zuobian-copy"></text></view>
+    </view>
+    <scroll-view class="scrollbox" scroll-x>
+        <view wx:for="{{tuiArr}}" wx:key="*this" class="tuibox2">
+            <view class="tuibox2-view1">
+                <view class="iconfont icon-24gl-play">{{item.shuzi}}</view>
+            </view>
+            <image src="{{item.Img}}"></image>
+            <!-- <view class="tuibox2-text1">{{item.text1}}</view>
+            <view class="tuibox2-text1">{{item.text2}}</view> -->
+            <view class="tuibox2-text">{{item.text}}</view>
+        </view>
+    </scroll-view>
+</view>
+<!-- 刷新滑动 -->
+<view class="shuaxinBox">
+    <!-- 刷新top -->
+    <view class="shuaxinBox-top">
+        <view class="shuaxinBox-top1"><text class="iconfont icon-shuaxin"></text></view>
+        <view class="shuaxinBox-top2">治愈温暖你的时光</view>
+        <view class="shuaxinBox-top3"><text class="iconfont icon-bofang1">播放</text></view>
+    </view>
+    <scroll-view class="shuxin-list" scroll-x>
+        <!-- 第一个滑块 -->
+        <view class="shuxin-content">
+            <view wx:for="{{shuxinArr.shuxinArr1}}" wx:key="*this" class="shuxin-content1">
+                <view class="shuxin-content-box1">
+                    <image src="{{item.Img}}"></image>
+                </view>
+                <view class="shuxin-content-box2">
+                    <view class="shuxin-content-box21">
+                        <view class="box21-1"><text class="text1">{{item.singName}}</text><text
+                                class="text2">{{item.singAuthor}}</text></view>
+                        <view class="box21-2"><text class="text3">{{item.singIntroduct}}</text></view>
+                    </view>
+                    <view class="shuxin-content-box22">
+                        <view class="iconfont icon-bofang2"></view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <!-- 第二个滑块 -->
+        <view class="shuxin-content">
+            <view wx:for="{{shuxinArr.shuxinArr2}}" wx:key="*this" class="shuxin-content1">
+                <view class="shuxin-content-box1">
+                    <image src="{{item.Img}}"></image>
+                </view>
+                <view class="shuxin-content-box2">
+                    <view class="shuxin-content-box21">
+                        <view class="box21-1"><text class="text1">{{item.singName}}</text><text
+                                class="text2">{{item.singAuthor}}</text></view>
+                        <view class="box21-1">{{item.singIntroduct}}</view>
+                    </view>
+                    <view class="shuxin-content-box22">
+                        <view class="iconfont icon-bofang2"></view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <!-- 第三个滑块 -->
+        <view class="shuxin-content">
+            <view wx:for="{{shuxinArr.shuxinArr3}}" wx:key="*this" class="shuxin-content1">
+                <view class="shuxin-content-box1">
+                    <image src="{{item.Img}}"></image>
+                </view>
+                <view class="shuxin-content-box2">
+                    <view class="shuxin-content-box21">
+                        <view class="box21-1"><text class="text1">{{item.singName}}</text><text
+                                class="text2">{{item.singAuthor}}</text></view>
+                        <view class="box21-1">{{item.singIntroduct}}</view>
+                    </view>
+                    <view class="shuxin-content-box22">
+                        <view class="iconfont icon-bofang2"></view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <!-- 第四个滑块 -->
+        <view class="shuxin-content">
+            <view wx:for="{{shuxinArr.shuxinArr4}}" wx:key="*this" class="shuxin-content1">
+                <view class="shuxin-content-box1">
+                    <image src="{{item.Img}}"></image>
+                </view>
+                <view class="shuxin-content-box2">
+                    <view class="shuxin-content-box21">
+                        <view class="box21-1"><text class="text1">{{item.singName}}</text><text
+                                class="text2">{{item.singAuthor}}</text></view>
+                        <view class="box21-1">{{item.singIntroduct}}</view>
+                    </view>
+                    <view class="shuxin-content-box22">
+                        <view class="iconfont icon-bofang2"></view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>
+<!-- 精选音乐 -->
+<view class="tuibox jingxuan bor">
+    <view class="tuibox1">
+        <view class="tuibox1-view1"><text>精选音乐视频</text></view>
+        <view class="tuibox1-view2"><text class="iconfont icon-shuaxin"></text>换一换 </view>
+    </view>
+    <scroll-view class="scrollbox" scroll-x>
+        <view wx:for="{{jingArr}}" wx:key="*this" class="tuibox2">
+            <view class="tuibox2-view1">
+                <view class="iconfont icon-24gl-play">{{item.shuzi}}</view>
+            </view>
+            <image src="{{item.Img}}"></image>
+            <!-- <view class="tuibox2-text1">{{item.text1}}</view>
+            <view class="tuibox2-text1">{{item.text2}}</view> -->
+            <view class="tuibox2-text">{{item.text}}</view>
+        </view>
+    </scroll-view>
+</view>
+<!-- 我的歌单 -->
+<view class="tuibox wode bor">
+    <view class="tuibox1">
+        <view class="tuibox1-view1"><text>我的歌单</text></view>
+        <view class="tuibox1-view2">更多 <text class="iconfont icon-zuobian-copy"></text></view>
+    </view>
+    <scroll-view class="scrollbox" scroll-x>
+        <view wx:for="{{wodeArr}}" wx:key="*this" class="tuibox2">
+            <view class="tuibox2-view1">
+                <view class="iconfont icon-24gl-play">{{item.shuzi}}</view>
+            </view>
+            <image src="{{item.Img}}"></image>
+            <!-- <view class="tuibox2-text1">{{item.text1}}</view>
+            <view class="tuibox2-text1">{{item.text2}}</view> -->
+            <view class="tuibox2-text">{{item.text}}</view>
+        </view>
+    </scroll-view>
+</view>
+<!-- hot -->
+<view class="shuaxinBox bor">
+    <!-- hot top -->
+    <view class="shuaxinBox-top">
+        <view class="hot-top1 {{index==1 ?'fontS':'fontS1'}}" bindtap="boKe" data-index="2">热门博客</view>
+        <view class="hot-top2"></view>
+        <view class="hot-top3 {{index==1 ? 'fontS1':'fontS'}}" bindtap="youSheng" data-index1="1">有声书</view>
+        <view class="hot-top4">更多<text class="iconfont icon-zuobian-copy"></text></view>
+    </view>
+    <view class="hot-box">
+        <view class="hot-box1 {{index==1 ?'active':'active1'}}">
+            <scroll-view class="shuxin-list hot-list1" scroll-x>
+                <!-- 第一个滑块 -->
+                <view class="shuxin-content">
+                    <view wx:for="{{shuxinArr.shuxinArr1}}" wx:key="*this" class="shuxin-content1">
+                        <view class="shuxin-content-box1">
+                            <image src="{{item.Img}}"></image>
+                        </view>
+                        <view class="shuxin-content-box2">
+                            <view class="shuxin-content-box21">
+                                <view class="box21-1"><text class="text1">{{item.singName}}</text><text
+                                        class="text2">{{item.singAuthor}}</text></view>
+                                <view class="box21-2"><text class="text3">{{item.singIntroduct}}</text></view>
+                            </view>
+                            <view class="shuxin-content-box22">
+                                <view class="iconfont icon-bofang2"></view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <!-- 第二个滑块 -->
+                <view class="shuxin-content">
+                    <view wx:for="{{shuxinArr.shuxinArr2}}" wx:key="*this" class="shuxin-content1">
+                        <view class="shuxin-content-box1">
+                            <image src="{{item.Img}}"></image>
+                        </view>
+                        <view class="shuxin-content-box2">
+                            <view class="shuxin-content-box21">
+                                <view class="box21-1"><text class="text1">{{item.singName}}</text><text
+                                        class="text2">{{item.singAuthor}}</text></view>
+                                <view class="box21-1">{{item.singIntroduct}}</view>
+                            </view>
+                            <view class="shuxin-content-box22">
+                                <view class="iconfont icon-bofang2"></view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <!-- 第三个滑块 -->
+                <view class="shuxin-content">
+                    <view wx:for="{{shuxinArr.shuxinArr3}}" wx:key="*this" class="shuxin-content1">
+                        <view class="shuxin-content-box1">
+                            <image src="{{item.Img}}"></image>
+                        </view>
+                        <view class="shuxin-content-box2">
+                            <view class="shuxin-content-box21">
+                                <view class="box21-1"><text class="text1">{{item.singName}}</text><text
+                                        class="text2">{{item.singAuthor}}</text></view>
+                                <view class="box21-1">{{item.singIntroduct}}</view>
+                            </view>
+                            <view class="shuxin-content-box22">
+                                <view class="iconfont icon-bofang2"></view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <!-- 第四个滑块 -->
+                <view class="shuxin-content">
+                    <view wx:for="{{shuxinArr.shuxinArr4}}" wx:key="*this" class="shuxin-content1">
+                        <view class="shuxin-content-box1">
+                            <image src="{{item.Img}}"></image>
+                        </view>
+                        <view class="shuxin-content-box2">
+                            <view class="shuxin-content-box21">
+                                <view class="box21-1"><text class="text1">{{item.singName}}</text><text
+                                        class="text2">{{item.singAuthor}}</text></view>
+                                <view class="box21-1">{{item.singIntroduct}}</view>
+                            </view>
+                            <view class="shuxin-content-box22">
+                                <view class="iconfont icon-bofang2"></view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+        <view class="hot-box2 {{index==1 ? 'active1':'active'}}">
+            <scroll-view class="shuxin-list hot-list2" scroll-x>
+                <!-- 第一个滑块 -->
+                <view class="shuxin-content">
+                    <view wx:for="{{shuxinArrA.shuxinArr1}}" wx:key="*this" class="shuxin-content1">
+                        <view class="shuxin-content-box1">
+                            <image src="{{item.Img}}"></image>
+                        </view>
+                        <view class="shuxin-content-box2">
+                            <view class="shuxin-content-box21">
+                                <view class="box21-1"><text class="text1">{{item.singName}}</text><text
+                                        class="text2">{{item.singAuthor}}</text></view>
+                                <view class="box21-2"><text class="text3">{{item.singIntroduct}}</text></view>
+                            </view>
+                            <view class="shuxin-content-box22">
+                                <view class="iconfont icon-bofang2"></view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <!-- 第二个滑块 -->
+                <view class="shuxin-content">
+                    <view wx:for="{{shuxinArrA.shuxinArr2}}" wx:key="*this" class="shuxin-content1">
+                        <view class="shuxin-content-box1">
+                            <image src="{{item.Img}}"></image>
+                        </view>
+                        <view class="shuxin-content-box2">
+                            <view class="shuxin-content-box21">
+                                <view class="box21-1"><text class="text1">{{item.singName}}</text><text
+                                        class="text2">{{item.singAuthor}}</text></view>
+                                <view class="box21-1">{{item.singIntroduct}}</view>
+                            </view>
+                            <view class="shuxin-content-box22">
+                                <view class="iconfont icon-bofang2"></view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <!-- 第三个滑块 -->
+                <view class="shuxin-content">
+                    <view wx:for="{{shuxinArrA.shuxinArr3}}" wx:key="*this" class="shuxin-content1">
+                        <view class="shuxin-content-box1">
+                            <image src="{{item.Img}}"></image>
+                        </view>
+                        <view class="shuxin-content-box2">
+                            <view class="shuxin-content-box21">
+                                <view class="box21-1"><text class="text1">{{item.singName}}</text><text
+                                        class="text2">{{item.singAuthor}}</text></view>
+                                <view class="box21-1">{{item.singIntroduct}}</view>
+                            </view>
+                            <view class="shuxin-content-box22">
+                                <view class="iconfont icon-bofang2"></view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <!-- 第四个滑块 -->
+                <view class="shuxin-content">
+                    <view wx:for="{{shuxinArrA.shuxinArr4}}" wx:key="*this" class="shuxin-content1">
+                        <view class="shuxin-content-box1">
+                            <image src="{{item.Img}}"></image>
+                        </view>
+                        <view class="shuxin-content-box2">
+                            <view class="shuxin-content-box21">
+                                <view class="box21-1"><text class="text1">{{item.singName}}</text><text
+                                        class="text2">{{item.singAuthor}}</text></view>
+                                <view class="box21-1">{{item.singIntroduct}}</view>
+                            </view>
+                            <view class="shuxin-content-box22">
+                                <view class="iconfont icon-bofang2"></view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+</view>

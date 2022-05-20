@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/Me/Me",
+    "pages/faxian1/faxian1",
+    "pages/follow/follow",
+    "pages/blog/blog",
+    "pages/yuncun/yuncun"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#dc2c1f",
+    "navigationBarTitleText": "网易云音乐",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#fc4446",
+    "list": [{
+        "pagePath": "pages/faxian1/faxian1",
+        "text": "发现",
+        "iconPath": "/images/bar/faxian-old.png",
+        "selectedIconPath": "/images/bar/faxian-new.png"
+      },
+      {
+        "pagePath": "pages/blog/blog",
+        "text": "播客",
+        "iconPath": "/images/bar/boke-old.png",
+        "selectedIconPath": "/images/bar/boke-new.png"
+      },
+      {
+        "pagePath": "pages/Me/Me",
+        "text": "我的",
+        "iconPath": "/images/bar/wode-old.png",
+        "selectedIconPath": "/images/bar/wode-new.png"
+      },
+      {
+        "pagePath": "pages/follow/follow",
+        "text": "关注",
+        "iconPath": "/images/bar/guanzhu-old.png",
+        "selectedIconPath": "/images/bar/guanzhu-new.png"
+      },
+      {
+        "pagePath": "pages/yuncun/yuncun",
+        "text": "云村",
+        "iconPath": "/images/bar/medium-old.png",
+        "selectedIconPath": "/images/bar/medium-new.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

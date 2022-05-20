@@ -1,0 +1,683 @@
+/* pages/faxian1/faxian1.wxss */
+@import"../../font_63xfieynrpx/iconfont.wxss";
+page {
+    background-color: #F5F5F5;
+}
+/* 头部菜单 */
+.cd{
+    position:fixed;
+    z-index: 4;
+    width: 100%;
+    height: 100hv;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+.cd-left{
+    width: 75%;
+    height: 100%;
+}
+.cd-right{
+    width: 25%;
+    height: 100%;
+}
+.cd1{
+    display: "";
+}
+.cd2{
+    display: none;
+}
+        /* 菜单右边top 一*/
+.rightBox1{
+    display: flex;
+    width: 100%;
+    height: 120rpx;
+    background-color: #F5F5F5;
+}
+.rightBox1 .rightBox1-1{
+    width: 120rpx;
+    height: 120rpx;
+    margin-left: 20rpx;
+}
+.rightBox1-1 image{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    margin-left: 10rpx;
+    margin-top: 10rpx;
+}
+.rightBox1-2{
+    width: 300rpx;
+    height: 120rpx;
+    line-height: 120rpx;
+}
+.rightBox2{
+    width: 100%;
+    height: 1214rpx;
+    white-space: nowrap;
+}
+.scrollbox1{
+    width: 100%;
+    height: 1000rpx;
+    background-color: #F5F5F5;
+    white-space: nowrap;
+}
+    /* 二 */
+.rightBox2-1{
+    width: 500rpx;
+    height: 200rpx;
+    margin-left: 20rpx;
+    border-radius: 20rpx;
+    background-color: #D9D9D9;
+}
+.rightBox2-1-top1{
+    border-bottom: 1rpx solid #A1A1A1;
+}
+.rightBox2-1-top1{
+    width: 100%;
+    height: 120rpx;
+    display: flex;
+}
+.rightBox2-1-top1-1{
+    width: 70%;
+    height: 120rpx;
+}
+.rightBox2-1-top1-2{
+    width: 100%;
+    height: 70rpx;
+    display: flex;
+}
+.aa{
+    width: 60%;
+    height: 70rpx;
+}
+.aa text{
+    font-size: 40rpx;
+    line-height: 70rpx;
+    font-weight: 700;
+}
+.bb{
+    width: 40%;
+    height: 70rpx;
+}
+.bb view{
+    margin-top: 25rpx;
+    width: 100rpx;
+    height: 20rpx;
+    border-radius: 10rpx;
+}
+.rightBox2-1-top2{
+    width: 30%;
+    height: 120rpx;
+}
+.rightBox2-1-top2 .cc{
+    width: 120rpx;
+    height: 50rpx;
+    border-radius: 25rpx;
+    margin-top: 10rpx;
+    border: 1rpx solid #fff;
+    text-align: center;
+}
+.cc text{
+    font-size: 26rpx;
+    color: #fff;
+}
+.rightBox2-1-top1-3{
+    width: 100%;
+    height: 50rpx;
+    font-size: 28rpx;
+}
+.rightBox2-1-bottom{
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+}
+.rightBox2-1-bottom text{
+    font-size: 26rpx;
+}
+    /* 三 */
+.rightBox3{
+    margin-top: 10rpx;
+    width: 500rpx;
+    height: 310rpx;
+    margin-left: 20rpx;
+    border-radius: 20rpx;
+    background-color: #fff;
+    border-radius: 20rpx;
+}
+.rightBox31{
+    margin: 0 auto;
+    width: 460rpx;
+    height: 100rpx;
+    border-bottom: 1rpx solid #A1A1A1;
+}
+.rightBox31-top{
+    float: left;
+    width: 20%;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+}
+.rightBox31-top text{
+    font-size: 52rpx;
+}
+.rightBox31-content{
+    float: left;
+    width: 60%;
+    height: 100rpx;
+    line-height: 100rpx;
+}
+.rightBox31-bottom{
+    float: left;
+    width: 20%;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+}
+    /* 四 */
+.rightBox4{
+    margin-top: 10rpx;
+    width: 500rpx;
+    margin-left: 20rpx;
+    border-radius: 20rpx;
+    background-color: #fff;
+    border-radius: 20rpx;
+}
+.rightBox4-1{
+    margin: 0 auto;
+    width: 460rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-bottom: 1rpx solid #A1A1A1;
+}
+.rightBox4-1 text {
+    font-size: 28rpx;
+}
+.rightBox41{
+    margin: 0 auto;
+    width: 460rpx;
+    height: 100rpx;
+}
+.rightBox41-top{
+    float: left;
+    width: 20%;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+}
+.rightBox41-top text{
+    font-size: 52rpx;
+}
+.rightBox41-content{
+    float: left;
+    width: 60%;
+    height: 100rpx;
+    line-height: 100rpx;
+}
+.rightBox41-bottom{
+    float: left;
+    width: 20%;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+}
+    /* 六 */
+.rightBox5{
+    width: 500rpx;
+    height: 100rpx;
+    margin: 20rpx 0 30rpx 20rpx;
+    line-height: 100rpx;
+    text-align: center;
+    background-color: #fff;
+    border: 1rpx solid #ccc;
+    border-radius: 30rpx;
+}
+.rightBox5 text{
+    font-size: 36rpx;
+    color: red;
+}
+
+.toubu {
+    display: flex;
+    width: 100%;
+    height: 80rpx;
+    background-color: #F5F5F5;
+}
+
+.toubu view {
+    height: 100%;
+}
+
+.toubu .toubu-1 {
+    width: 15%;
+}
+
+.toubu-1-caidan {
+    font-size: 60rpx;
+    text-align: center;
+    line-height: 80rpx;
+}
+
+/* 头部第二部分 */
+.toubu .toubu-2 {
+    display: flex;
+    width: 70%;
+    height: 60rpx;
+    margin-top: 10rpx;
+}
+
+.toubu-2-sousuo {
+    height: 60rpx;
+    font-size: 40rpx;
+    text-align: center;
+    line-height: 60rpx;
+}
+
+.ipt {
+    width: 70%;
+    height: 60rpx;
+    background-color: #fff;
+}
+
+.toubu-2 .serch-box {
+    width: 20%;
+    height: 60rpx;
+    background-color: #fff;
+    border-top-left-radius: 30rpx;
+    border-bottom-left-radius: 30rpx;
+}
+
+.toubu-2 .maikefeng-box {
+    width: 20%;
+    height: 60rpx;
+    background-color: #fff;
+    border-top-right-radius: 30rpx;
+    border-bottom-right-radius: 30rpx;
+}
+
+/* 头部第三部分 */
+.toubu .toubu-3 {
+    width: 15%;
+}
+
+/* 轮播图 */
+.lunbotu {
+    position: relative;
+    width: 100%;
+    height: 300rpx;
+    background-color: #fff;
+    padding: 5% 5% 0 5%;
+}
+
+.lunbo-image {
+    width: 90%;
+    height: 90%;
+    border-radius: 30rpx;
+}
+
+/* 指示点 */
+.dot {
+    position: absolute;
+    bottom: 50rpx;
+    right: 120rpx;
+    display: flex;
+}
+
+.dot view {
+    width: 15rpx;
+    height: 15rpx;
+    margin-right: 10rpx;
+    border-radius: 50%;
+    background-color: red;
+}
+.dot .rr{
+    background-color: #fff;
+}
+
+/* 列表滚动 */
+.list {
+    width: 100%;
+    height: 140rpx;
+    background-color: #fff;
+    white-space: nowrap;
+}
+
+.list .list-view1 {
+    width: 150rpx;
+    height: 120rpx;
+    display: inline-block;
+    text-align: center;
+}
+
+.list .list-view2 {
+    width: 150rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+}
+
+.list .list-view2 view {
+    width: 80rpx;
+    height: 80rpx;
+    font-size: 44rpx;
+    color: #d6483f;
+    margin: 0 auto;
+    background-color: #fcf0f0;
+    border-radius: 50%;
+}
+
+.list-view1 text {
+    display: block;
+    font-size: 24rpx;
+    padding-top: 10rpx;
+}
+
+/* 推荐歌单 */
+.tuibox {
+    width: 100%;
+    height: 450rpx;
+    margin-top: 1rpx;
+    background-color: #fff;
+    border-bottom-left-radius: 20rpx;
+    border-bottom-right-radius: 20rpx;
+}
+
+/* 推荐歌单第一部分 */
+.tuibox .tuibox1 {
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+}
+
+.tuibox .tuibox1 .tuibox1-view1 {
+    float: left;
+    margin-left: 20rpx;
+    width: 40%;
+    height: 80rpx;
+    font-size: 32rpx;
+    font-weight: 700;
+}
+
+.tuibox .tuibox1 .tuibox1-view2 {
+    float: right;
+    text-align: center;
+    line-height: 40rpx;
+    width: 15%;
+    height: 40rpx;
+    margin: 10rpx 0;
+    margin-right: 20rpx;
+    font-size: 24rpx;
+    border-radius: 30rpx;
+    border: 1rpx solid #ccc;
+}
+
+.tuibox .tuibox1 .tuibox1-view2 text {
+    font-size: 20rpx;
+}
+
+/* 推荐歌单第二部分 */
+.scrollbox {
+    height: 420rpx;
+    white-space: nowrap;
+    margin-left: 20rpx;
+}
+
+.tuibox2 {
+    position: relative;
+    width: 300rpx;
+    height: 420rpx;
+    display: inline-block;
+}
+
+/* 小图标定位 */
+.tuibox2 .tuibox2-view1 {
+    position: absolute;
+    top: 10rpx;
+    right: 40rpx;
+    width: 100rpx;
+    height: 30rpx;
+    border-radius: 20rpx;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.tuibox2 .tuibox2-view1 view {
+    font-size: 25rpx;
+    color: #fff;
+}
+
+.tuibox2 image {
+    width: 280rpx;
+    height: 280rpx;
+    border-radius: 30rpx;
+}
+
+/* .tuibox2 .tuibox2-text1{
+    width: 280rpx;
+    font-size: 24rpx;
+    text-align: center;
+}  */
+.tuibox2 .tuibox2-text {
+    width: 280rpx;
+    font-size: 24rpx;
+    /* text-align: center; */
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+/* 滑动刷新 */
+.shuaxinBox {
+    width: 100%;
+    height: 500rpx;
+    margin-top: 20rpx;
+    background-color: #fff;
+    border-radius: 20rpx;
+}
+
+/* 刷新top */
+.shuaxinBox .shuaxinBox-top {
+    width: 100%;
+    height: 80rpx;
+    text-align: center;
+    line-height: 80rpx;
+}
+
+.shuaxinBox .shuaxinBox-top .shuaxinBox-top1 {
+    float: left;
+    width: 10%;
+}
+
+.shuaxinBox .shuaxinBox-top .shuaxinBox-top1 text {
+    font-size: 40rpx;
+}
+
+.shuaxinBox .shuaxinBox-top .shuaxinBox-top2 {
+    text-align: left;
+    float: left;
+    width: 60%;
+    font-size: 32rpx;
+    font-weight: 700;
+}
+
+.shuaxinBox .shuaxinBox-top .shuaxinBox-top3 {
+    float: right;
+    width: 15%;
+    height: 40rpx;
+    line-height: 40rpx;
+    border: 1rpx solid #ccc;
+    margin-top: 20rpx;
+    margin-right: 20rpx;
+    border-radius: 20rpx;
+}
+
+.shuaxinBox-top3 text {
+    font-size: 24rpx;
+}
+
+/* 第一个滑块 */
+.shuxin-list {
+    width: 100%;
+    height: 400rpx;
+    white-space: nowrap;
+}
+
+.shuxin-list .shuxin-content {
+    display: inline-block;
+    width: 80%;
+    height: 390rpx;
+    margin-left: 20rpx;
+}
+
+.shuxin-content1 {
+    width: 100%;
+    height: 130rpx;
+}
+
+.shuxin-content1 .shuxin-content-box1 {
+    float: left;
+    width: 20%;
+    height: 130rpx;
+}
+
+.shuxin-content-box1 image {
+    width: 90%;
+    height: 90%;
+    border-radius: 20rpx;
+}
+
+.shuxin-content1 .shuxin-content-box2 {
+    float: left;
+    width: 80%;
+    height: 130rpx;
+    border-bottom: 1rpx solid #ccc;
+}
+
+.shuxin-content-box2 .shuxin-content-box21 {
+    float: left;
+    width: 80%;
+    height: 130rpx;
+}
+
+.shuxin-content-box2 .box21-1 {
+    width: 100%;
+    line-height: 64rpx;
+    height: 64rpx;
+}
+
+.box21-1 .text1 {
+    font-size: 30rpx;
+    text-align: left;
+}
+
+.box21-1 .text2 {
+    font-size: 22rpx;
+    color: gray;
+}
+
+.shuxin-content-box2 .box21-2 {
+    width: 100%;
+    height: 64rpx;
+}
+
+.box21-2 .text3 {
+    line-height: 0;
+    font-size: 26rpx;
+}
+
+.shuxin-content-box2 .shuxin-content-box22 {
+    float: left;
+    width: 20%;
+    height: 130rpx;
+    text-align: center;
+    line-height: 130rpx;
+}
+
+.shuxin-content-box22 view {
+    font-size: 52rpx;
+}
+
+.jingxuan {
+    margin-top: 20rpx;
+}
+
+/* 精选音乐 */
+.bor {
+    border-radius: 20rpx;
+}
+
+/* 我的歌单 */
+.wode {
+    margin-top: 20rpx;
+}
+
+/* 热门 */
+.hot-top1 {
+    float: left;
+    width: 150rpx;
+    font-size: 32rpx;
+    font-weight: 700;
+}
+
+.hot-top2 {
+    float: left;
+    border: 2rpx solid #ccc;
+    height: 40rpx;
+    margin-top: 20rpx;
+}
+
+.hot-top3 {
+    float: left;
+    width: 100rpx;
+    font-size: 28rpx;
+    color: #ccc;
+}
+.fontS{
+    font-size: 28rpx;
+    font-weight: 400;
+    color: #ccc;
+}
+.fontS1{
+    font-size: 32rpx;
+    font-weight: 700;
+    color: black;
+}
+
+.hot-top4 {
+    float: right;
+    width: 100rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    text-align: center;
+    font-size: 24rpx;
+    margin-top: 20rpx;
+    margin-right: 10rpx;
+    border-radius: 20rpx;
+    border: 1rpx solid #ccc;
+}
+
+.hot-top4 text {
+    font-size: 24rpx;
+}
+
+/* hot list */
+.hot-box {
+    position: relative;
+    width: 100%;
+    height: 400rpx;
+}
+.hot-box1 {
+    width: 100%;
+    height: 400rpx;
+}
+.hot-box2 {
+    width: 100%;
+    height: 400rpx;
+}
+.active{
+    display: none;
+}
+.active1{
+    display: "";
+}
+

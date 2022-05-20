@@ -1,0 +1,57 @@
+<!--pages/yuncun/yuncun.wxml-->
+<view>
+  <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+    <view class="tab {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">广场</view>
+    <view class="tab {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">云村热门</view>
+    <view class="tab {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">宝藏音乐人</view>
+    <view class="tab {{currentTab==3?'active':''}}" data-current="3" bindtap="swichNav">音乐现场</view>
+    <view class="tab {{currentTab==4?'active':''}}" data-current="4" bindtap="swichNav">演唱演奏</view>
+    <view class="tab {{currentTab==5?'active':''}}" data-current="5" bindtap="swichNav">云音乐出品</view>
+    <view class="tab {{currentTab==6?'active':''}}" data-current="6" bindtap="swichNav">MV</view>
+    <view class="tab {{currentTab==7?'active':''}}" data-current="7" bindtap="swichNav">混剪</view>
+    <view class="tab {{currentTab==8?'active':''}}" data-current="8" bindtap="swichNav">音乐推荐</view>
+    <view class="tab {{currentTab==9?'active':''}}" data-current="9" bindtap="swichNav">情感故事</view>
+    <view class="tab {{currentTab==10?'active':''}}" data-current="10" bindtap="swichNav">音乐生活</view>
+    <view class="tab {{currentTab==11?'active':''}}" data-current="11" bindtap="swichNav">舞蹈</view>
+  </scroll-view>
+
+  <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab"
+    style="height:{{winHeight}}rpx">
+    <swiper-item wx:for="{{[0,1,2,3,4,5,6,7,8,9,10,11]}}">
+
+      <view class="Search">
+        <view class="iconfont icon-31sousuo"></view>
+        <input type="text" placeholder="那些歌词长大后才真的看懂？"></input>
+      </view>
+
+      <scroll-view scroll-y="true" class="scoll-h">
+        <view wx:if="{{currentTab==0}}">
+          <myimage wx:for="{{listData}}" playData="{{item}}"></myimage>
+        </view>
+        <view wx:elif="{{currentTab==1}}">
+          <myimage wx:for="{{remenData}}" playData="{{item}}"></myimage>
+        </view>
+        <view wx:if="{{currentTab==2}}">
+          <myimage wx:for="{{baozangData}}" playData="{{item}}"></myimage>
+        </view>
+        <view wx:elif="{{currentTab==3}}">
+          <myimage wx:for="{{remenData}}" playData="{{item}}"></myimage>
+        </view>
+        <view wx:if="{{currentTab==4}}">
+          <myimage wx:for="{{listData}}" playData="{{item}}"></myimage>
+        </view>
+        <view wx:elif="{{currentTab==5}}">
+          <myimage wx:for="{{remenData}}" playData="{{item}}"></myimage>
+        </view>
+        <view wx:if="{{currentTab==6}}">
+          <myimage wx:for="{{listData}}" playData="{{item}}"></myimage>
+        </view>
+        <view wx:elif="{{currentTab==7}}">
+          <myimage wx:for="{{remenData}}" playData="{{item}}"></myimage>
+        </view>
+        <view wx:else>null</view>
+
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

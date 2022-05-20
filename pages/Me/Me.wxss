@@ -1,0 +1,264 @@
+/* pages/Me/Me.wxss */
+page{
+  background-color: rgb(244, 244, 244);
+  /* background-color: saddlebrown; */
+}
+/* 顶部 用户个人信息 */
+.userMsgBox{
+  width: 96%;
+  margin: 30rpx 2%;
+  display: flex;
+  padding: 15rpx 30rpx;
+}
+.userMsgBox image{
+  width: 15%;
+  height: 108rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+}
+.userMsgflexBox{
+  /* flex-direction: column; */
+  /* display: flex; */
+  /* flex-grow: 1; */
+  font-size: 1.25rem;
+  /* display: block; */
+  width: 65%;
+}
+.userMsgflexBox .NickName{
+  font-size: 1.25rem;
+  display: inline;
+}
+.userMsgflexBox .row{
+  display: flex;
+  flex-direction: row;
+}
+.userMsgflexBox .row view{
+  margin-right: 1rem;
+  font-size: 26rpx;
+}
+.jiantou{
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.jiantou image{
+  width: 100%;
+  height: 42rpx;
+
+}
+/* 功能 */
+.funBox{
+  width: 94%;
+  margin: 0 3%;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 35rpx;
+  background-color: #ffffff;
+  font-size: 23rpx;
+  color: #444141;
+  /* padding: 30rpx; */
+  padding: 30rpx 0 20rpx 0;
+  text-align: center;
+}
+.funBox .item{
+  width: 15%;
+  margin: 0 5% 20rpx 5%;
+}
+.funBox .item image{
+  width: 80%;
+  height: 84rpx;
+}
+/* 我中意的音乐 */
+.favMusicBox{
+  background-color: #ffffff;
+  width: 94%;
+  margin:25rpx 3%;
+  border-radius: 35rpx;
+  padding: 30rpx 0;
+  display: flex;
+  /* padding: 15rpx 30rpx; */
+  align-items: center;
+}
+.favMusicBox image{
+  border-radius: 15rpx;
+  width: 15%;
+  height: 108rpx;
+  /* margin-right: 30rpx; */
+  margin: 0 30rpx;
+  
+}
+.favMusicBox .favflexBox{
+  font-size: 0.95rem;
+  width: 40%;
+}
+.favMusicBox .favflexBox .favTitle{
+  display: inline;
+}
+.favMusicBox .favflexBox .underTitle{
+  color: #c9c9c9;
+  font-size: 0.75rem;
+}
+.favMusicBox:last-child{
+  justify-content: center;
+}
+.favMusicBox .xindongBtn{
+  border: 4rpx solid #efefef;
+  padding: 10rpx 0;
+  border-radius: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  text-align: center;
+  width: 28%;
+ font-size: 0.75rem;
+  /*text-align: center;
+  width: 40%; */
+  /* line-height: 40rpx; */
+}
+/* .favMusicBox .xindongBtn text{
+  line-height: 74rpx;
+} */
+.favMusicBox .xindongBtn image{
+  /* flex-grow: 1; */
+  /* display: block; */
+  width: 20%;
+  height: 40rpx;
+  margin: auto 0;
+  margin-right: 0.5rem;
+}
+/* 歌单Navigate */
+.gedanNavgate{
+  position: sticky;
+  /* top: 482.2px; */
+  top: -1px;
+  display: flex;
+  width: 80%;
+  margin: 20rpx auto;
+  justify-content: space-around;
+  line-height: 80rpx;
+  /* align-items: center; */
+}
+.gedanNavgate_sticky{
+  /* background-color: #ffffff; */
+  background-color: #f7f0ec;
+  width: 100%;
+  height: 80rpx;
+  border-radius: 0 0 15rpx 15rpx;
+}
+.gedanNavgate .shu{
+  background-color: #c7c3c3;
+  width: 3.5rpx;
+  margin-top: 20rpx;
+  /* margin-top单纯为了给间隔竖居中 */
+  height: 40rpx;
+}
+.gedanNavgate .gedanTitle{
+  color: #615e5e;
+}
+.addGeDan{
+  width: 94%;
+  margin:25rpx 3%;
+  border-radius: 35rpx;
+  background-color: #ffffff;
+  /* height: auto; */
+  padding-bottom: 10rpx;
+}
+.addGeDan .tips{
+  border-radius: 35rpx 35rpx 0 0;
+  background-color: #fff2ea;
+  color: #e69461;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 15rpx;
+  /* margin-bottom: 9rpx; */
+}
+.addGeDan .header{
+  margin-left: 1.6rem;
+  display: flex;
+  color: #9d9d9d;
+  flex-wrap: nowrap ;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  font-size: 0.75rem;
+}
+/* .addGeDan .header:first-child{
+  margin-top: 50rpx;
+} */
+.addGeDan .header .headerText{
+margin-top: 20rpx;
+}
+.addGeDan .header image{
+  border-radius: 15rpx;
+  width: 40rpx;
+  height: 40rpx;
+   /* margin-right: 30rpx;  */
+  margin: 0 15rpx;
+  position: relative;
+  left: 360rpx;
+
+  /* padding-bottom: 20rpx; */
+}
+.addGeDan .gedanLoop image:last-child{
+  text-align: center;
+  width: 40rpx;
+  height: 40rpx;
+  /* margin-left: 80rpx; */
+}
+.addGeDan .gedanLoop{
+  background-color: #ffffff;
+  width: 94%;
+  margin:5rpx 3%;
+  border-radius: 35rpx;
+  padding: 8rpx 0;
+  display: flex;
+  /* padding: 15rpx 30rpx; */
+  align-items: center;
+}
+
+.addGeDan .gedanLoop image{
+  border-radius: 15rpx;
+  width: 15%;
+  height: 108rpx;
+  /* margin-right: 30rpx; */
+  margin: 0 30rpx;
+}
+.addGeDan .gedanLoop .gedanFlexBox{
+  font-size: 0.95rem;
+  width: 60%;
+}
+
+.addGeDan .gedanLoop .gedanTitle{
+  display: inline;
+}
+.addGeDan .gedanLoop .underTitle{
+  color: #c9c9c9;
+  font-size: 0.75rem;
+}
+.gedanAssText{
+  margin-top: 10rpx;
+  color: #a7a1a1;
+  text-align: center;
+  font-size: 0.85rem;
+}
+.tryBtn{
+  text-align: center;
+  background-color: #fe3a3b;
+  width: 200rpx;
+  border-radius: 15rpx;
+  color: #ffffff;
+  margin: 10px auto;
+}
+/* .addGeDan view::last-child{
+  margin-bottom: 20rpx;
+} */
+/* swiper-item{
+  height: 150px;
+} */
+.swiper_item{
+  /* color: #a7a1a1; */
+  text-align: center;
+  margin: 60px auto;
+}

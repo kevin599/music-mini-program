@@ -1,0 +1,15 @@
+<!--pages/play/play.wxml-->
+
+<view class="bigBox">
+  <image src="http://m.qpic.cn/psc?/V52gn3BP0WWI6X0Ctnir2lcI8U3tbV01/45NBuzDIW489QBoVep5mcb6T0xhbGxLFPPrytca0zM*0U3ogwgsKdtKYg8IWF*lZ949CdS5uma9YPG51b6p0J5jY*TYk8ZqeIN8u9DRQ74Q!/b&bo=HgGPAQAAAAADF6M!&rf=viewer_4"></image>
+  <view class='box'>
+    <audio id="myAudio" poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" controls loop></audio>
+    <view class="boxplay">
+      <view class=" iconfont icon-24gl-repeat2"></view>
+      <view class=" iconfont icon-ai18" bindtap="audioStart" data-playseek="{{playseek}}"></view>
+      <view bindtap="audioPlay" data-play="{{play}}" class="playaudio {{play==0?'iconfont icon-24gl-play':'iconfont icon-bofangzanting'}} "></view>
+      <view class=" iconfont icon-ai18-copy" bindtap="playseek" data-playseek="{{playseek}}"></view>
+      <view class=" iconfont icon-24gf-playlistMusic2"></view>
+    </view>
+  </view>
+</view>

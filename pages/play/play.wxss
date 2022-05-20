@@ -1,0 +1,31 @@
+/* pages/play/play.wxss */
+@import"/iconfonts/iconfont.wxss";
+.bigBox image {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.box {
+  position: absolute;
+  left: 0;
+  bottom: 0rpx;
+  padding: 50rpx 72rpx;
+  z-index: 3;
+}
+
+.boxplay {
+  display: flex;
+  margin: 30rpx auto;
+
+}
+
+.playaudio {
+  font-size: 65rpx;
+}
+
+.iconfont {
+  color: #fff;
+  font-size: 50rpx;
+  padding-left: 56rpx;
+}
